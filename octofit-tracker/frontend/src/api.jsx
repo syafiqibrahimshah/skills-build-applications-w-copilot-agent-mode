@@ -10,12 +10,12 @@ export function toCollection(payload) {
   return payload?.results ?? payload?.items ?? payload?.data ?? []
 }
 
-export function useCollection(endpoint) {
+export function useCollection(url) {
   const [state, setState] = useState({ items: [], loading: true, error: '' })
 
   useEffect(() => {
     const controller = new AbortController()
-    fetch(`${apiBaseUrl}/${endpoint}/`, { signal: controller.signal })
+    fetch(url, { signal: controller.signal })
       .then((response) => {
         if (!response.ok) throw new Error(`Request failed (${response.status})`)
         return response.json()
@@ -25,7 +25,7 @@ export function useCollection(endpoint) {
         if (error.name !== 'AbortError') setState({ items: [], loading: false, error: error.message })
       })
     return () => controller.abort()
-  }, [endpoint])
+  }, [url])
 
   return state
 }
