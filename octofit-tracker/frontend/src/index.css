@@ -1,0 +1,4 @@
+:root { color: #203a36; font-family: Georgia, 'Times New Roman', serif; letter-spacing: 0; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+button, input, select, textarea { font: inherit; }

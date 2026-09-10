@@ -1,0 +1,17 @@
+.app-shell { min-height: 100vh; }
+.app-header { align-items: center; background: #134e4a; color: #fff; display: flex; justify-content: space-between; min-height: 72px; padding: 0 2rem; }
+.brand-mark { background: #f4c95d; border-radius: 50%; color: #134e4a; display: inline-grid; font-weight: 800; height: 28px; place-items: center; width: 28px; }
+.brand-name { font-size: 1.2rem; font-weight: 700; margin-left: .5rem; }
+.status-badge { background: #d1fae5; border-radius: 999px; color: #065f46; font-size: .8rem; font-weight: 700; padding: .3rem .7rem; }
+.app-layout { display: grid; grid-template-columns: 200px minmax(0, 1fr); min-height: calc(100vh - 72px); }
+.app-nav { background: #e7f0ed; display: flex; flex-direction: column; gap: .25rem; padding: 1.25rem .75rem; }
+.app-nav a { border-radius: 6px; color: #28534d; font-weight: 600; padding: .65rem .8rem; text-decoration: none; }
+.app-nav a.active, .app-nav a:hover { background: #134e4a; color: #fff; }
+.app-content { background: #f8faf9; padding: 2rem; }
+.view-heading { color: #173b36; font-size: 1.75rem; font-weight: 800; margin-bottom: .25rem; }
+.view-subtitle { color: #64748b; margin-bottom: 1.5rem; }
+.data-table { background: #fff; border: 1px solid #d7e3df; border-radius: 6px; overflow: hidden; }
+.data-table th { background: #edf5f2; color: #315b54; font-size: .75rem; text-transform: uppercase; }
+.data-table td, .data-table th { padding: .85rem 1rem; vertical-align: middle; }
+.state-panel { background: #fff; border: 1px solid #d7e3df; border-radius: 6px; color: #64748b; padding: 2rem; }
+@media (max-width: 700px) { .app-header { padding: 0 1rem; } .app-layout { display: block; } .app-nav { flex-direction: row; overflow-x: auto; } .app-nav a { white-space: nowrap; } .app-content { padding: 1.25rem; } }
